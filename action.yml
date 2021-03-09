@@ -67,6 +67,8 @@ inputs:
 outputs:
   pull-request-number:
     description: 'The pull request number'
+  pull-request-branch:
+    description: 'The pull request branch'
 runs:
   using: 'node12'
   main: 'dist/index.js'
