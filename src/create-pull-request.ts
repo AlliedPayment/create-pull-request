@@ -205,6 +205,7 @@ export async function createPullRequest(inputs: Inputs): Promise<void> {
       core.startGroup('Setting outputs')
       core.setOutput('pull-request-number', pull.number)
       core.setOutput('pull-request-url', pull.html_url)
+      core.setOutput('pull-request-branch', inputs.branch)
       if (pull.created) {
         core.setOutput('pull-request-operation', 'created')
       } else if (result.action == 'updated') {
